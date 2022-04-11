@@ -1,0 +1,11 @@
+name: cheating Gihthub streak
+on:
+  schedule:
+    - cron: "* * 0 ? * * *"
+
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Run cron"
+        run: echo "Hello naveenkumar"
