@@ -3,7 +3,7 @@
 name: daily task
 on:
   push:
-  - branches:
+    branches:
     - master
 
 jobs:
