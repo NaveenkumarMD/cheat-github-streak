@@ -1,29 +1,29 @@
 
 
-# name: daily task
-# on:
-#   schedule:
-#     - cron: "0 0 * * *"
+name: daily task
+on:
+  schedule:
+    - cron: "0 0 * * *"
 
-# jobs:
-#   build:
-#     runs-on: windows-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#       - name: Setup python
-#         uses: actions/setup-python@v2
-#         with:
-#           python-version: "3.8"
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
 
-#       - name : Running Writereadme.py file
-#         run: python index.py
+      - name : Running Writereadme.py file
+        run: python index.py
         
-#       - name: Create report file
-#         run: date +%s > report.txt
-#       - name: Commit report
-#         run: |
-#           git config --global user.name 'Naveenkumar M'
-#           git config --global user.email 'naveen9715568487@gmail.com'
-#           git add .
-#           git commit -am "Automated report"
-#           git push origin master
+      - name: Create report file
+        run: date +%s > report.txt
+      - name: Commit report
+        run: |
+          git config --global user.name 'Naveenkumar M'
+          git config --global user.email 'naveen9715568487@gmail.com'
+          git add .
+          git commit -am "Automated report"
+          git push origin master
